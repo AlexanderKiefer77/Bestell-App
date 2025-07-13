@@ -1,0 +1,109 @@
+header {
+    height: 100px;
+    background-color: var(--backgroundColorHeaderFooter);
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
+
+header img {
+    height: 80px;
+}
+
+.main { /* gesamte breite fläche ohner header footer */
+    background-color: white;
+}
+
+.content { /* Fläche ohne header foooter */
+    width: calc(100%-300px);
+    /*min-height: calc(100vh - 200px);*/
+    height: 1500px;
+    display: flex;
+}
+.test_content { /*Fläche ohne Warenkorb-Fläche*/
+    width: 100%;
+}
+
+.heroImage {
+    background-image: url("./assets/img/mainPicture.jpg");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    background-color: white;
+    padding-left: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100.3%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
+.hero-icon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 10;
+    background-color: white;
+}
+
+/*.content_wrapper{
+    gap: 2px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    background-color: #879099;
+}*/
+
+.mainPicture { /* bild oben */
+    object-fit: cover top;
+    width: 100%;
+    height: 300px;
+    padding-top: 6px;
+}
+
+.Menü { /*Hauptgericht beilage */
+    display: flex;
+    gap: 20px;
+}
+
+
+.basket_wrapper {
+    width: 300px;
+    flex-grow: 1;
+    /* nimmt die ganzegrößehöhe ein*/
+    padding: 16px;
+    /*background-color: aqua;*/
+}
+
+.basket {
+    width: 100%;
+    height: 400px;
+    background-color: khaki;
+    position: sticky;
+    /* dadurch bleibt es am oberen Bildschirmrand hängen, mit dem Abstand bei top / bei sticky kann es probleme geben, wenn overflow hidden ausserhalb verwendet wird */
+    top: 4px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+footer {
+    height: 100px;
+    background-color: var(--backgroundColorHeaderFooter);
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
