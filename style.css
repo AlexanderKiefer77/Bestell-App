@@ -106,9 +106,17 @@ header img {
 }
 
 /* ######################################################## */
-.dishes { /* ### */
+.dishes {
     padding-left: 24px;
+    padding-right: 14px;
     padding-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dishes img {
+    height: 40px;
 }
 
 .individualDishes {
