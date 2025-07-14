@@ -30,25 +30,84 @@
                             <p class="fontColor">&emsp;Bewertung ( 5,1 von 5 Sternen )</p>
                             <div class="foodMenuBar">
                                 <img src="./assets/icons/arrowRight.svg" alt="Pfeil rechts">
-                                <h3>Hauptgerichte</h3>
-                                <h3>Beilage</h3>
+                                <h3><a href="#mainDishes">Hauptgerichte</a></h3>
+                                <h3><a href="#supplements">Beilagen</a></h3>
+                                <h3><a href="#drinks">Getränke</a></h3>
                             </div>
                         </div>
                     </div>
 
-                    <div id="dishes">
-                        <div class="individualDishes">
-                            <div>
-                                <h4>Pizza Salami</h4>
-                                <p>mit Mozarella und Rindssalami</p>
-                                <p class="fontColor">Preis €</p>
-                            </div>
-                            <div>
-                                <img src="./assets/icons/add.svg" alt="add Icon">
-                            </div>
+                    <div id="mainDishes" class="dishes">
+                        <h2>Hauptgerichte</h2>
+                    </div>
+                    <div class="individualDishes">
+                        <div>
+                            <h4>Pizza Salami</h4>
+                            <p>mit Mozarella und Rindssalami</p>
+                            <p class="fontColor">Preis €</p>
+                        </div>
+                        <div>
+                            <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
+                        </div>
+                    </div>
+                    <div class="individualDishes">
+                        <div>
+                            <h4>Pizza Salami</h4>
+                            <p>mit Mozarella und Rindssalami</p>
+                            <p class="fontColor">Preis €</p>
+                        </div>
+                        <div>
+                            <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
                         </div>
                     </div>
 
+                    <div id="supplements" class="dishes">
+                        <h2>Beilagen</h2>
+                    </div>
+                    <div class="individualDishes">
+                        <div>
+                            <h4>grüner Salat</h4>
+                            <p>mit Italien Dressing</p>
+                            <p class="fontColor">Preis €</p>
+                        </div>
+                        <div>
+                            <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
+                        </div>
+                    </div>
+                    <div class="individualDishes">
+                        <div>
+                            <h4>gemischter Salat</h4>
+                            <p>mit French Dressing</p>
+                            <p class="fontColor">Preis €</p>
+                        </div>
+                        <div>
+                            <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
+                        </div>
+                    </div>
+
+                    <div id="drinks" class="dishes">
+                        <h2>Getränke</h2>
+                    </div>
+                    <div class="individualDishes">
+                        <div>
+                            <h4>Mineralwasser</h4>
+                            <p>0.75 Liter Flasche</p>
+                            <p class="fontColor">Preis €</p>
+                        </div>
+                        <div>
+                            <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
+                        </div>
+                    </div>
+                    <div class="individualDishes">
+                        <div>
+                            <h4>Cola oder Limo</h4>
+                            <p>normal, light oder zero</p>
+                            <p class="fontColor">Preis €</p>
+                        </div>
+                        <div>
+                            <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
+                        </div>
+                    </div>
                 </div>
 
                 <section class="basket_wrapper">
@@ -63,7 +122,7 @@
     <footer>
         <div class="contentWidth"></div>
     </footer>
-    <!-- <script src="./script.js"></script>-->
+    <script src="./script.js"></script>
 </body>
 
 </html>
