@@ -5,43 +5,91 @@ function init() {
   renderMainDishes();
   renderSupplements();
   renderDrinks();
+  renderShoppingCart();
 }
 
-function renderMainDishes() { // init starts with body onload, render 
-  // the books with the function "pictureRendering"
+function renderMainDishes() {
   let mainDishesRef = document.getElementById('contentMainDishes');
 
   for (let i = 0; i < myDishes.length; i++) {
     mainDishesRef.innerHTML += dishesRendering(i);
-    //likesRendering(index);
-    //renderComments(index);
   }
 }
 
-function renderSupplements() { // init starts with body onload, render 
-  // the books with the function "pictureRendering"
+function renderSupplements() {
   let supplementsRef = document.getElementById('contentSupplements');
 
   for (let j = 0; j < mySupplements.length; j++) {
     supplementsRef.innerHTML += supplementsRendering(j);
-    //likesRendering(index);
-    //renderComments(index);
   }
 }
 
-function renderDrinks() { // init starts with body onload, render 
-  // the books with the function "pictureRendering"
+function renderDrinks() {
   let drinksRef = document.getElementById('contentDrinks');
 
   for (let k = 0; k < myDrinks.length; k++) {
     drinksRef.innerHTML += drinksRendering(k);
-    //likesRendering(index);
-    //renderComments(index);
+  }
+}
+
+let myShoppingCart = [
+  {
+    "name": "Mineralwasser",
+    "price": 2.00,
+    "startnumber": "1"
+  },
+  {
+    "name": "CCola",
+    "price": 4.00,
+    "startnumber": "1"
+  },
+  {
+    "name": "Mineralwasser",
+    "price": 2.00,
+    "startnumber": "1"
+  },
+  {
+    "name": "CCola",
+    "price": 4.00,
+    "startnumber": "1"
+  },
+  {
+    "name": "Mineralwasser",
+    "price": 2.00,
+    "startnumber": "1"
+  },
+  {
+    "name": "CCola",
+    "price": 4.00,
+    "startnumber": "1"
+  },
+  {
+    "name": "Mineralwasser",
+    "price": 2.00,
+    "startnumber": "1"
+  },
+  {
+    "name": "CCola",
+    "price": 4.00,
+    "startnumber": "1"
+  }
+]
+
+function renderShoppingCart() {
+  let shoppingCartRef = document.getElementById('shoppingCart');
+  
+  if (myShoppingCart.length == 0) {
+    shoppingCartRef.innerHTML += "Der Warenkorb ist leer."
+  } else {
+
+    for (let j = 0; j < myShoppingCart.length; j++) {
+      shoppingCartRef.innerHTML += shoppingCartRendering(j);
+    }
   }
 }
 
 function addToBasketCase() {
-    console.log("Zu Warenkorb hinzugefügt");
+  console.log("Zu Warenkorb hinzugefügt");
 }
 
 function increaseNumber() {

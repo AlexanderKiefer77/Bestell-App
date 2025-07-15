@@ -38,3 +38,17 @@ function drinksRendering(k) {
                 </div>`
 }
 
+function shoppingCartRendering(j) {
+    return ` <div class="orderedMeal">
+                <p class="mealNameShoppingCart">${myShoppingCart[j].name}</h>
+                <div class="quantities">
+                    <div class="quantitiesPlusMinus">
+                        <img src="./assets/icons/remove.svg" alt="Button Anzahl reduzieren" onclick="reduceNumber()">
+                        <p class="numberOfMeal">${myShoppingCart[j].startnumber + "x"}</p>
+                        <img src="./assets/icons/add.svg" alt="Button Anzahl erhöhen" onclick="increaseNumber()">
+                    </div>
+                    <p class="sumPricePerMeal">${myShoppingCart[j].price.toFixed(2) + " €"}</p>
+                    <img src="./assets/icons/delete.svg" alt="Aus Warenkorb entfernen" onclick="removeFromBasketCase()">
+                </div>
+            </div>`
+}
