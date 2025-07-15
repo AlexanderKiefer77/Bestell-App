@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/standart.css">
 
     <script src="./scripts/db.js"></script>
-    <script src="./scripts/template.js"></script>    
+    <script src="./scripts/template.js"></script>
 </head>
 
 <body onload="init()">
@@ -32,9 +32,15 @@
                             <p class="fontColor">&emsp;Bewertung ( 5,1 von 5 Sternen )</p>
                             <div class="foodMenuBar">
                                 <img src="./assets/icons/arrowRight.svg" alt="Pfeil rechts">
-                                <a href="#mainDishes"><h3>Hauptgerichte</h3></a>
-                                <a href="#supplements"><h3>Beilagen</h3></a>
-                                <a href="#drinks"><h3>Getränke</h3></a>
+                                <a href="#mainDishes">
+                                    <h3>Hauptgerichte</h3>
+                                </a>
+                                <a href="#supplements">
+                                    <h3>Beilagen</h3>
+                                </a>
+                                <a href="#drinks">
+                                    <h3>Getränke</h3>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -43,25 +49,78 @@
                         <h2>Hauptgerichte</h2>
                         <a href="#topPosition"><img src="./assets/icons/arrowUpBlack.svg" alt="Pfeil nach oben"></a>
                     </div>
-                    <div id="contentMainDishes"></div>
+                    <div id="contentMainDishes"></div> <!-- for render function -->
 
                     <div id="supplements" class="dishes">
                         <h2>Beilagen</h2>
                         <a href="#topPosition"><img src="./assets/icons/arrowUpBlack.svg" alt="Pfeil nach oben"></a>
                     </div>
-                    <div id="contentSupplements"></div>
+                    <div id="contentSupplements"></div> <!-- for render function -->
 
                     <div id="drinks" class="dishes">
                         <h2>Getränke</h2>
                         <a href="#topPosition"><img src="./assets/icons/arrowUpBlack.svg" alt="Pfeil nach oben"></a>
                     </div>
-                    <div id="contentDrinks"></div>
-                    
+                    <div id="contentDrinks"></div> <!-- for render function -->
+
                 </div>
 
                 <section class="basket_wrapper">
                     <div class="basket">
-                        <h2>Warenkorb</h2>
+                        <h2 class="basketHeadline">Warenkorb</h2>
+
+                        <div id="shoppingCart" class="shoppingCartArea"> <!-- for render function -->
+
+                            <div class="orderedMeal">
+                                <p class="mealNameShoppingCart">Pizza</h>
+                                <div class="quantities">
+                                    <div class="quantitiesPlusMinus">
+                                        <img src="./assets/icons/remove.svg" alt="Button Anzahl reduzieren"
+                                            onclick="reduceNumber()">
+                                        <p class="numberOfMeal">3x</p>
+                                        <img src="./assets/icons/add.svg" alt="Button Anzahl erhöhen"
+                                            onclick="increaseNumber()">
+                                    </div>
+                                    <p class="sumPricePerMeal">25,50 €</p>
+                                    <img src="./assets/icons/delete.svg" alt="Aus Warenkorb entfernen"
+                                        onclick="removeFromBasketCase()">
+                                </div>
+                            </div>
+
+                            <div class="orderedMeal">
+                                <p><b>Pizza</b></p>
+                                <div class="quantities">
+                                    <div class="quantitiesPlusMinus">
+                                        <img src="./assets/icons/remove.svg" alt="Button Anzahl reduzieren"
+                                            onclick="reduceNumber()">
+                                        <p class="numberOfMeal">3x</p>
+                                        <img src="./assets/icons/add.svg" alt="Button Anzahl erhöhen"
+                                            onclick="increaseNumber()">
+                                    </div>
+                                    <p class="sumPricePerMeal">25,50 €</p>
+                                    <img src="./assets/icons/delete.svg" alt="Aus Warenkorb entfernen"
+                                        onclick="removeFromBasketCase()">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="totalCosts">
+                            <div class="costs">
+                                <p>Zwischensumme</p>
+                                <p>45.55 €</p>
+                            </div>
+                            <div class="costs">
+                                <p>Lieferkosten</p>
+                                <p>5.00 €</p>
+                            </div>
+                            <div class="costs">
+                                <p><b>Gesamt</b></p>
+                                <p><b>55.55 €</b></p>
+                            </div>
+                        </div>
+
+
                     </div>
                 </section>
             </div>

@@ -1,3 +1,4 @@
+//window.scrollTo(0, 0);+
 
 function init() {
   //getFromLocalStorage();  
@@ -40,6 +41,17 @@ function renderDrinks() { // init starts with body onload, render
 }
 
 function addToBasketCase() {
-    console.log("Zuw Warenkorb hinzugefügt");
-    
+    console.log("Zu Warenkorb hinzugefügt");
+}
+
+function increaseNumber() {
+  console.log("Die Anzahl wurde erhöht");
+}
+
+function reduceNumber() {
+  console.log("Die Anzahl wurde verringert");
+}
+
+function removeFromBasketCase() {
+  console.log("Aus Warenkorb entfernt");
 }
