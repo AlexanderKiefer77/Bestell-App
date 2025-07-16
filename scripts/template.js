@@ -48,7 +48,7 @@ function shoppingCartRendering(j) {
                         <img src="./assets/icons/add.svg" alt="Button Anzahl erhöhen" onclick="increaseNumber()">
                     </div>
                     <p class="sumPricePerMeal">${myShoppingCart[j].price.toFixed(2) + " €"}</p>
-                    <img src="./assets/icons/delete.svg" alt="Aus Warenkorb entfernen" onclick="removeFromShoppingCart()">
+                    <img src="./assets/icons/delete.svg" alt="Aus Warenkorb entfernen" onclick="removeFromShoppingCart(${j})">
                 </div>
             </div>`
 }

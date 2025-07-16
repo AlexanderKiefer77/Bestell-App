@@ -79,6 +79,9 @@ function reduceNumber() {
   console.log("Die Anzahl wurde verringert");
 }
 
-function removeFromShoppingCart() {
-  console.log("Aus Warenkorb entfernt");
+function removeFromShoppingCart(j) {
+  myShoppingCart.splice(j, 1);
+  let shoppingCartRefPlace = document.getElementById('shoppingCart');
+  shoppingCartRefPlace.innerHTML = '';
+  renderShoppingCart();
 }
