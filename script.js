@@ -1,4 +1,4 @@
-//window.scrollTo(0, 0);+
+//window.scrollTo(0, 0);
 
 function init() {
   //getFromLocalStorage();  
@@ -32,52 +32,11 @@ function renderDrinks() {
   }
 }
 
-let myShoppingCart = [
-  {
-    "name": "Mineralwasser",
-    "price": 2.00,
-    "startnumber": "1"
-  },
-  {
-    "name": "CCola",
-    "price": 4.00,
-    "startnumber": "1"
-  },
-  {
-    "name": "Mineralwasser",
-    "price": 2.00,
-    "startnumber": "1"
-  },
-  {
-    "name": "CCola",
-    "price": 4.00,
-    "startnumber": "1"
-  },
-  {
-    "name": "Mineralwasser",
-    "price": 2.00,
-    "startnumber": "1"
-  },
-  {
-    "name": "CCola",
-    "price": 4.00,
-    "startnumber": "1"
-  },
-  {
-    "name": "Mineralwasser",
-    "price": 2.00,
-    "startnumber": "1"
-  },
-  {
-    "name": "CCola",
-    "price": 4.00,
-    "startnumber": "1"
-  }
-]
+let myShoppingCart = [];
 
 function renderShoppingCart() {
   let shoppingCartRef = document.getElementById('shoppingCart');
-  
+
   if (myShoppingCart.length == 0) {
     shoppingCartRef.innerHTML += "Der Warenkorb ist leer."
   } else {
@@ -88,8 +47,28 @@ function renderShoppingCart() {
   }
 }
 
-function addToBasketCase() {
-  console.log("Zu Warenkorb hinzugefügt");
+function dishesAddToShoppingCart(i) {
+  let shoppingCartRefPlace = document.getElementById('shoppingCart');
+  shoppingCartRefPlace.innerHTML = '';
+  myShoppingCart.push({ "name": myDishes[i].name, "price": myDishes[i].price, "startnumber": "1" })
+  console.log(myShoppingCart);
+  renderShoppingCart();
+}
+
+function supplementsAddToShoppingCart(j) {
+  let shoppingCartRefPlace = document.getElementById('shoppingCart');
+  shoppingCartRefPlace.innerHTML = '';
+  myShoppingCart.push({ "name": mySupplements[j].name, "price": mySupplements[j].price, "startnumber": "1" })
+  console.log(myShoppingCart);
+  renderShoppingCart();
+}
+
+function drinksAddToShoppingCart(k) {
+  let shoppingCartRefPlace = document.getElementById('shoppingCart');
+  shoppingCartRefPlace.innerHTML = '';
+  myShoppingCart.push({ "name": myDrinks[k].name, "price": myDrinks[k].price, "startnumber": "1" })
+  console.log(myShoppingCart);
+  renderShoppingCart();
 }
 
 function increaseNumber() {
@@ -100,6 +79,6 @@ function reduceNumber() {
   console.log("Die Anzahl wurde verringert");
 }
 
-function removeFromBasketCase() {
+function removeFromShoppingCart() {
   console.log("Aus Warenkorb entfernt");
 }

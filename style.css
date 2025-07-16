@@ -158,6 +158,10 @@ header img {
 .shoppingCartArea {
     height: 266px; /* 410px-50px-70px-24px */
     overflow-y: scroll;
+    text-align: start;
+    color: rgba(47, 79, 79, 0.7);
+    font-weight: bold;
+    font-style: italic;
 }
 
 .orderedMeal {

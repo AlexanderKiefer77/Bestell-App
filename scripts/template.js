@@ -7,7 +7,7 @@ function dishesRendering(i) {
                         <p class="fontColor">Preis :  ${myDishes[i].price.toFixed(2) + " €"}</p>
                     </div>
                     <div>
-                        <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
+                        <img src="./assets/icons/add.svg" alt="add Icon" onclick="dishesAddToShoppingCart(${i})">
                     </div>
                 </div>`
 }
@@ -20,7 +20,7 @@ function supplementsRendering(j) {
                         <p class="fontColor">Preis :  ${mySupplements[j].price.toFixed(2) + " €"}</p>
                     </div>
                     <div>
-                        <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
+                        <img src="./assets/icons/add.svg" alt="add Icon" onclick="supplementsAddToShoppingCart(${j})">
                     </div>
                 </div>`
 }
@@ -33,7 +33,7 @@ function drinksRendering(k) {
                         <p class="fontColor">Preis :  ${myDrinks[k].price.toFixed(2) + " €"}</p>
                     </div>
                     <div>
-                        <img src="./assets/icons/add.svg" alt="add Icon" onclick="addToBasketCase()">
+                        <img src="./assets/icons/add.svg" alt="add Icon" onclick="drinksAddToShoppingCart(${k})">
                     </div>
                 </div>`
 }
@@ -48,7 +48,7 @@ function shoppingCartRendering(j) {
                         <img src="./assets/icons/add.svg" alt="Button Anzahl erhöhen" onclick="increaseNumber()">
                     </div>
                     <p class="sumPricePerMeal">${myShoppingCart[j].price.toFixed(2) + " €"}</p>
-                    <img src="./assets/icons/delete.svg" alt="Aus Warenkorb entfernen" onclick="removeFromBasketCase()">
+                    <img src="./assets/icons/delete.svg" alt="Aus Warenkorb entfernen" onclick="removeFromShoppingCart()">
                 </div>
             </div>`
 }
