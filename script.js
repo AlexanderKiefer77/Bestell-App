@@ -125,3 +125,7 @@ function calculateTotalCosts(subtotalRef, deliveryCostsRef) {
     document.getElementById('totalCosts').innerHTML = subtotalRef + " €";
   }
 }
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
