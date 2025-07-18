@@ -1,5 +1,7 @@
 
 let myShoppingCart = [];
+let deliveryCostsLess50Euro = 5;
+let deliveryCostsMore50Euro = 0;
 
 function init() {
   //getFromLocalStorage();  
@@ -140,10 +142,10 @@ function calculateDeliveryCosts(subtotalRef) {
   if (subtotalRef == 0) {
     document.getElementById('deliveryCosts').innerHTML = " 0.00 €";
   } else if (subtotalRef < 50) {
-    deliveryCostsRef = (5).toFixed(2); // ######
+    deliveryCostsRef = deliveryCostsLess50Euro.toFixed(2);
     document.getElementById('deliveryCosts').innerHTML = deliveryCostsRef + " €";
   } else {
-    document.getElementById('deliveryCosts').innerHTML = (0).toFixed(2) + " €"; // ##########
+    document.getElementById('deliveryCosts').innerHTML = deliveryCostsMore50Euro.toFixed(2) + " €";
   }
   calculateTotalCosts(subtotalRef, deliveryCostsRef);
 }
