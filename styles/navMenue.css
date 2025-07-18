@@ -1,0 +1,38 @@
+
+.resp_menu_box {
+    background-color: #FF8000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;    
+    border-bottom: solid;
+    border-color: var(--borderColorHeaderFooter);
+    width: 480px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 250ms ease-in-out;
+}
+
+.resp_menu_closed {
+    transform: translateX(100%);
+}
+
+.navMenü {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+.navLinks a:hover {
+    color: white;
+}

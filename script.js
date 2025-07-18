@@ -166,3 +166,12 @@ function calculateTotalCosts(subtotalRef, deliveryCostsRef) {
 function scrollToTop() {
   window.scrollTo(0, 0);
 }
+
+function orderSend() {
+  console.log("Essen wird bestellt");
+  
+}
+
+function toggleRespMenu() { // function für resp Menü aus / zuklappen
+  document.getElementById('resp_menu').classList.toggle('resp_menu_closed')
+}

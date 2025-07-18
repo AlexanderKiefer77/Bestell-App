@@ -25,6 +25,18 @@ header img {
     height: 80px;
 }
 
+.innerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.navButton {
+    height: 50px;
+    cursor: pointer;
+}
+
 /* ######################################################## */
 .main {
     /* gesamte breite fläche ohne header footer */
@@ -141,8 +153,7 @@ header img {
 
 .basket {
     width: 100%;
-    height: 410px;
-    /*background-color: khaki;*/
+    height: 500px;
     position: sticky;
     top: 6px;
     text-align: center;
@@ -156,7 +167,7 @@ header img {
 }
 
 .shoppingCartArea {
-    height: 266px; /* 410px-50px-70px-24px */
+    height: 276px; /* 500px-50px-70px-24px */
     overflow-y: scroll;
     text-align: start;
     color: rgba(47, 79, 79, 0.7);

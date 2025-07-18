@@ -14,3 +14,16 @@
     background-color: greenyellow;
     color: darkblue;
 }
+
+.navMenueButton {
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 6px;  
+    cursor: pointer;
+    padding: 4px;
+    font-weight: bold;
+}
+
+.navMenueButton:hover {
+    background-color: wheat;
+}
