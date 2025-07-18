@@ -1,1 +1,16 @@
-/* für buttons usw */
+
+.orderButton {
+    background-color: #FF8000;
+    margin-top: 24px;
+    padding: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.orderButton:hover {    
+    background-color: greenyellow;
+    color: darkblue;
+}
