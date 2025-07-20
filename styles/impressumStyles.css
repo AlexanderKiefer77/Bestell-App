@@ -18,13 +18,14 @@
     word-wrap: break-word;
 }
 
-header a {
+header {
     display: flex;
     align-items: center;
 }
 
 header img {
     height: 80px;
+    padding-left: 24px;
 }
 
 footer {
@@ -34,4 +35,5 @@ footer {
 
 footer img {
     height: 80px;
+    padding-left: 24px;
 }

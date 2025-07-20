@@ -1,0 +1,58 @@
+@media(max-width: 1150px) {
+
+    .heroIcon {
+        display: none;
+    }
+}
+
+@media(max-width: 1000px) {
+
+    footer {
+        height: 140px;
+    }
+
+    .address {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 720px) {
+
+    header img {
+        height: 60px;
+    }
+
+    .innerHeader {
+        padding-right: 24px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shoppingCartWrapper {
+        max-width: 360px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .foodMenuBar img {
+        display: none;
+    }
+
+    .foodMenuBar {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .shoppingCart {
+        width: auto;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+}
