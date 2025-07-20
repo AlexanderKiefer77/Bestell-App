@@ -37,7 +37,7 @@ function renderDrinks() {
 }
 
 function renderShoppingCart() {
-  let shoppingCartRef = document.getElementById('shoppingCart');
+  let shoppingCartRef = document.getElementById('shoppingCartRender');
 
   if (myShoppingCart.length == 0) {
     shoppingCartRef.innerHTML += "Der Warenkorb ist leer."
@@ -120,11 +120,12 @@ function removeFromShoppingCart(j) {
 }
 
 function deleteShoppingCartPlace() {
-  let shoppingCartRefPlace = document.getElementById('shoppingCart');
+  let shoppingCartRefPlace = document.getElementById('shoppingCartRender');
   shoppingCartRefPlace.innerHTML = '';
 }
 
 function calculateSubTotal() {
+
   let element = 0;
   for (let index = 0; index < myShoppingCart.length; index++) {
     element += myShoppingCart[index].newprice;
@@ -165,11 +166,6 @@ function calculateTotalCosts(subtotalRef, deliveryCostsRef) {
 
 function scrollToTop() {
   window.scrollTo(0, 0);
-}
-
-function orderSend() {
-  console.log("Essen wird bestellt");
-  
 }
 
 function toggleRespMenu() { // function für resp Menü aus / zuklappen

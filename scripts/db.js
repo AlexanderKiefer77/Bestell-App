@@ -3,14 +3,14 @@ let myDishes = [
     {
         "name": "Pizza Magherita",
         "price": 6.50,
-        "description": "mit Mozarella",
+        "description": "mit Mozzarella",
         "startnumber": 1,
         "newprice": 6.50
     },
     {
         "name": "Pizza Alaska",
         "price": 11.50,
-        "description": "mit Lachs, Spinat und Mozarella",
+        "description": "mit Lachs, Spinat und Mozzarella",
         "startnumber": 1,
         "newprice": 11.50
     },

@@ -14,11 +14,11 @@ header {
     height: 100px;
     background-color: var(--backgroundColorHeaderFooter);
     display: flex;
-    align-items: center;
-    padding-left: 24px;
+    /*align-items: center;*/
+    /*padding-left: 24px;*/
     border-bottom: solid;
     border-color: var(--borderColorHeaderFooter);
-    margin-bottom: 6px;
+    /*margin-bottom: 6px;*/
 }
 
 header img {
@@ -28,30 +28,27 @@ header img {
 .innerHeader {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-right: 100px;
-}
-
-.navButton {
-    height: 50px;
-    cursor: pointer;
+    /*align-items: center;*/
+    padding-left: 24px;
+    padding-right: 100px;
 }
 
 /* ######################################################## */
 .main {
-    /* gesamte breite fläche ohne header footer */
+    /* entire width area without header footer */
     background-color: white;
+    font-size: 16px;
 }
 
 .content {
-    /* Fläche ohne header foooter */
+    /* area without header foooter */
     width: calc(100%-300px);
     min-height: calc(100vh - 200px);
     display: flex;
 }
 
-.test_content {
-    /*Fläche ohne Warenkorb-Fläche*/
+.innerContent {
+    /*area without shoppingcart area*/
     width: 100%;
 }
 
@@ -63,44 +60,35 @@ header img {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-top: 6px;
     margin-bottom: 12px;
     border-radius: 4px;
 }
 
 .heroText {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 12px 24px;
-    position: absolute;
+    /*position: absolute;*/
     top: 50%;
     left: 50%;
-    width: 100.3%;
-    z-index: 10;
+    z-index: 1;
     transform: translate(-50%, -50%);
-    line-height: 40px;
+    line-height: 46px;
 }
 
 .heroIcon {
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 0;
+    top: -12px;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    z-index: 10;
-    background-color: white;
+    z-index: 2;
+    background-color: rgba(250, 235, 215, 0.7);
 }
 
 /* ######################################################## */
-/*.content_wrapper{
-    gap: 2px;
-    padding: 2px;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    background-color: #879099;
-}*/
-
 .foodMenuBar {
     display: flex;
     align-items: center;
@@ -128,6 +116,7 @@ header img {
 
 .dishes img {
     height: 40px;
+    cursor: pointer;
 }
 
 .individualDishes {
@@ -146,33 +135,33 @@ header img {
 }
 
 /* ######################################################## */
-.basket_wrapper {
-    width: 300px;
+.shoppingCartWrapper {
+    width: 360px;
     flex-grow: 1;
 }
 
-.basket {
-    width: 100%;
-    height: 500px;
+.shoppingCart {
     position: sticky;
     top: 6px;
+    width: 100%;
+    height: 500px;    
     text-align: center;
     border-radius: 4px;
     padding: 12px;
 }
 
-.basketHeadline {
+.shoppingCartHeadline {
     height: 50px;
     font-size: 24px;
 }
 
 .shoppingCartArea {
-    height: 276px; /* 500px-50px-70px-24px */
-    overflow-y: scroll;
-    text-align: start;
-    color: rgba(47, 79, 79, 0.7);
-    font-weight: bold;
-    font-style: italic;
+    height: 276px;
+    overflow-y: auto;
+    text-align: start;    
+    color: rgba(47, 79, 79, 0.7);  /*for no items in the shopping cart*/
+    font-weight: bold; /*for no items in the shopping cart*/
+    font-style: italic; /*for no items in the shopping cart*/
 }
 
 .orderedMeal {
@@ -236,11 +225,26 @@ footer {
     padding-left: 24px;
     border-top: solid;
     border-color: var(--borderColorHeaderFooter);
-    /*text-align: center;*/
 }
 
 .address {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
     font-weight: bold;
     font-size: 24px;
-    padding-left: 100px;
+}
+
+/* ######################################################## */
+.sendingConfirmation {
+    background-color: var(--backgroundColorOverlav);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid black;
+    border-radius: 40px;
+    height: 500px;
+    width: 700px;
+    gap: 50px;
 }

@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
     <link rel="icon" href="./assets/icons/favicon-32x32.png" sizes="any" type="image/svg+xml">
-    <link rel="stylesheet" href="./style.css">
+
     <link rel="stylesheet" href="./styles/standart.css">
-    <link rel="stylesheet" href="./styles/assets.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/buttons.css">
+    <link rel="stylesheet" href="./styles/overlay.css">
     <link rel="stylesheet" href="./styles/navMenue.css">
+    <link rel="stylesheet" href="./style.css">
 
     <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
+    <script src="./scripts/overlay.js" defer></script>
 </head>
 
 <body onload="init()">
@@ -26,38 +30,35 @@
         </div>
     </header>
 
-    <div id="resp_menu" class="resp_menu_box resp_menu_closed">
-        <div class="navMenü">
-            <button class="navMenueButton" onclick="toggleRespMenu()">close menü</button>
-        </div>
-        <div class="navLinks">
-            <a href="#address">Kontakt</a>
-            <a href="">Geschäftsbedingungen</a>
-            <a href="./impressum.html">Impressum</a>
-        </div>
-    </div>
+    <div id="overlay"></div>
 
-    <section class="main"> <!-- gesamte breite fläche ohner header footer -->
+    <section id="aot" class="main"> <!-- entire width area without header footer -->
         <div class="contentWidth">
-            <div class="content"> <!-- Fläche ohne header foooter -->
-                <div class="test_content"> <!-- Fläche ohne Warenkorb-Fläche -->
 
-                    <div class="heroImage"> <!-- bild -->
-                        <div class="heroText"> <!-- banner im bild -->
+            <div id="resp_menu" class="resp_menu_box resp_menu_closed">
+                <div class="navMenü">
+                    <button class="navMenueButton" onclick="toggleRespMenu()">close menü</button>
+                </div>
+                <div class="navLinks">
+                    <a href="#address">Kontakt</a>
+                    <a href="">Geschäftsbedingungen</a>
+                    <a href="./impressum.html">Impressum</a>
+                </div>
+            </div>
+
+            <div class="content"> <!-- area without header foooter -->
+                <div class="innerContent"> <!-- area without shoppingcart area -->
+
+                    <div class="heroImage"> <!-- picture -->
+                        <div class="heroText"> <!-- banner in the picture -->
                             <div><img src="./assets/img/pizza.png" alt="kleines Pizza Logo" class="heroIcon"></div>
                             <h1>Deeer Pizza Laden</h1>
                             <p class="fontColor">&emsp;Bewertung ( 5,1 von 5 Sternen )</p>
                             <div class="foodMenuBar">
                                 <img src="./assets/icons/arrowRight.svg" alt="Pfeil rechts">
-                                <a href="#mainDishes">
-                                    <h3>Hauptgerichte</h3>
-                                </a>
-                                <a href="#supplements">
-                                    <h3>Beilagen</h3>
-                                </a>
-                                <a href="#drinks">
-                                    <h3>Getränke</h3>
-                                </a>
+                                <a href="#mainDishes"><h3>Hauptgerichte</h3></a>
+                                <a href="#supplements"><h3>Beilagen</h3></a>
+                                <a href="#drinks"><h3>Getränke</h3></a>
                             </div>
                         </div>
                     </div>
@@ -82,11 +83,11 @@
 
                 </div>
 
-                <section class="basket_wrapper">
-                    <div class="basket">
-                        <h2 class="basketHeadline">Warenkorb</h2>
+                <section class="shoppingCartWrapper">
+                    <div class="shoppingCart">
+                        <h2 class="shoppingCartHeadline">Warenkorb</h2>
 
-                        <div id="shoppingCart" class="shoppingCartArea"></div><!-- for render function -->
+                        <div id="shoppingCartRender" class="shoppingCartArea"></div><!-- for render function -->
 
                         <div class="totalCosts">
                             <div class="costs">
@@ -102,7 +103,7 @@
                                 <b id="totalCosts"></b>
                             </div>
                         </div>
-                        <button class="orderButton" onclick="orderSend()">Bestellen</button>
+                        <button class="orderButton" onclick="openOverlay()">Bestellen</button>
                     </div>
                 </section>
 
@@ -112,12 +113,16 @@
 
     <footer>
         <div class="contentWidth">
-            <address id="address" class="address">Deer Pizza Laden&emsp;/&emsp;Musterstraße 123&emsp;/&emsp;12345
-                Musterstadt&emsp;/&emsp;Tel. 0123 - 456 789</address>
+            <address id="address" class="address">
+                <p>Deer Pizza Laden&emsp;/</p>
+                <p>&emsp;Musterstraße 123&emsp;/</p>
+                <p>&emsp;12345 Musterstadt&emsp;/</p>
+                <p>&emsp;Tel. 0123 - 456 789</p>
+            </address>
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js" async></script>
 
 </body>
 

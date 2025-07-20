@@ -15,15 +15,36 @@
     color: darkblue;
 }
 
+.navButton {
+    height: 50px;
+    cursor: pointer;
+}
+
 .navMenueButton {
     width: 120px;
     border: 2px solid black;
     border-radius: 6px;  
     cursor: pointer;
     padding: 4px;
-    font-weight: bold;
+    font-weight: bold;    
+    background-color: whitesmoke;
 }
 
 .navMenueButton:hover {
-    background-color: wheat;
+    background-color: greenyellow;
+}
+
+.overlayCloseButton {
+    background-color: whitesmoke;
+    padding: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.overlayCloseButton:hover {
+    background-color: greenyellow;
+    color: darkblue;
 }

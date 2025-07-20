@@ -1,0 +1,12 @@
+
+:root {
+    /* Variable for max. Content width  */
+    --maxWidth: 1440px;
+
+    /* Variables for colors */    
+    --backgroundColorHeaderFooter: #FF8000;
+    --backgroundColorAOT: rgb(3, 35, 26);
+    --borderColorHeaderFooter: rgba(255, 0, 0, 0.477);
+    --backgroundColorOverlayBackground: whitesmoke;
+    --backgroundColorOverlav: #FF8000;
+}
