@@ -3,7 +3,7 @@
 
     .heroIcon {
         display: none;
-    }    
+    }
 }
 
 @media(max-width: 1000px) {
@@ -30,6 +30,19 @@
 
     .heroImage {
         margin-right: 4px;
+    }
+
+ .foodMenuBar img {
+        display: none;
+    }
+
+    .foodMenuBar {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .foodMenuBarShoppingCart {
+        display: flex;
     }
 
     .content {
@@ -67,15 +80,6 @@
 }
 
 @media(max-width: 500px) {
-
-    .foodMenuBar img {
-        display: none;
-    }
-
-    .foodMenuBar {
-        flex-direction: column;
-        gap: 0;
-    }
 
     .shoppingCart {
         width: auto;

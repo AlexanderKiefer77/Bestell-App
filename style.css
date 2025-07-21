@@ -73,6 +73,10 @@ header img {
     line-height: 46px;
 }
 
+.foodMenuBarShoppingCart {
+    display: none;
+}
+
 .heroIcon {
     width: 100px;
     height: 100px;
