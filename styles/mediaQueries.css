@@ -1,8 +1,9 @@
+
 @media(max-width: 1150px) {
 
     .heroIcon {
         display: none;
-    }
+    }    
 }
 
 @media(max-width: 1000px) {
@@ -27,6 +28,10 @@
         padding-right: 24px;
     }
 
+    .heroImage {
+        margin-right: 4px;
+    }
+
     .content {
         display: flex;
         flex-direction: column;
@@ -36,6 +41,28 @@
     .shoppingCartWrapper {
         max-width: 360px;
         width: 100%;
+    }
+
+    .navMenü {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .navLinks {
+        flex-direction: column;
+    }
+
+    .navLinks a {
+        padding: 6px;
+        text-align: center;
+    }
+
+    .resp_menu_box {
+        width: 240px;
+        height: auto;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        z-index: 5;
     }
 }
 
@@ -54,5 +81,13 @@
         width: auto;
         margin-left: 6px;
         margin-right: 6px;
+    }
+}
+
+@media(max-width: 420px) {
+
+    .resp_menu_box {
+        max-width: 420px;
+        width: 100%;
     }
 }
