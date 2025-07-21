@@ -4,7 +4,6 @@ let deliveryCostsLess50Euro = 5;
 let deliveryCostsMore50Euro = 0;
 
 function init() {
-  //getFromLocalStorage();  
   renderMainDishes();
   renderSupplements();
   renderDrinks();
@@ -48,6 +47,7 @@ function renderShoppingCart() {
   }
 }
 
+// function to add dishes to the shopping cart, if this dish is not included in the shopping cart
 function dishesAddToShoppingCart(i) {
   deleteShoppingCartPlace();
 
@@ -55,13 +55,24 @@ function dishesAddToShoppingCart(i) {
 
   if (dishAvailable == false) {
     myShoppingCart.push({ "name": myDishes[i].name, "price": myDishes[i].price, "startnumber": myDishes[i].startnumber, "newprice": myDishes[i].newprice });
+    renderShoppingCart();
     calculateSubTotal();
   } else {
-    console.log("Schon im Warenkorb");
+    dishesIncreaseTheNumbers(i);
   }
+}
+
+// function to increase the number of the dish from the menue card, then this dish is already included
+function dishesIncreaseTheNumbers(i) {
+  let element = myShoppingCart.findIndex(element => element.name == myDishes[i].name);
+  deleteShoppingCartPlace();
+  myShoppingCart[element].startnumber++;
+  myShoppingCart[element].newprice = myShoppingCart[element].price * myShoppingCart[element].startnumber;
+  calculateSubTotal();
   renderShoppingCart();
 }
 
+// function to add supplements in the shopping cart, if this supplement is not included in the shopping cart
 function supplementsAddToShoppingCart(j) {
   deleteShoppingCartPlace();
 
@@ -69,13 +80,24 @@ function supplementsAddToShoppingCart(j) {
 
   if (supplementAvailable == false) {
     myShoppingCart.push({ "name": mySupplements[j].name, "price": mySupplements[j].price, "startnumber": mySupplements[j].startnumber, "newprice": mySupplements[j].newprice })
+    renderShoppingCart();
     calculateSubTotal();
   } else {
-    console.log("Schon im Warenkorb");
+    supplementsIncreaseTheNumbers(j);
   }
+}
+
+// function to increase the number of the supplement from the menue card, then this supplement is already included
+function supplementsIncreaseTheNumbers(j) {
+  let element = myShoppingCart.findIndex(element => element.name == mySupplements[j].name);
+  deleteShoppingCartPlace();
+  myShoppingCart[element].startnumber++;
+  myShoppingCart[element].newprice = myShoppingCart[element].price * myShoppingCart[element].startnumber;
+  calculateSubTotal();
   renderShoppingCart();
 }
 
+// function to add drinks in the shopping cart, if this drink is not included in the shopping cart
 function drinksAddToShoppingCart(k) {
   deleteShoppingCartPlace();
 
@@ -83,13 +105,24 @@ function drinksAddToShoppingCart(k) {
 
   if (drinkAvailable == false) {
     myShoppingCart.push({ "name": myDrinks[k].name, "price": myDrinks[k].price, "startnumber": myDrinks[k].startnumber, "newprice": myDrinks[k].newprice })
+    renderShoppingCart();
     calculateSubTotal();
   } else {
-    console.log("Schon im Warenkorb");
+    drinksIncreaseTheNumbers(k);
   }
+}
+
+// function to increase the number of the drink from the menue card, then this drink is already included
+function drinksIncreaseTheNumbers(k) {
+  let element = myShoppingCart.findIndex(element => element.name == myDrinks[k].name);
+  deleteShoppingCartPlace();
+  myShoppingCart[element].startnumber++;
+  myShoppingCart[element].newprice = myShoppingCart[element].price * myShoppingCart[element].startnumber;
+  calculateSubTotal();
   renderShoppingCart();
 }
 
+// function to increase the number of the product within the shoppingCart
 function increaseNumber(j) {
   myShoppingCart[j].startnumber++;
   myShoppingCart[j].newprice = myShoppingCart[j].price * myShoppingCart[j].startnumber;
@@ -99,6 +132,7 @@ function increaseNumber(j) {
   renderShoppingCart();
 }
 
+// function to reduce the number of the product within the shoppingCart
 function reduceNumber(j) {
   if (myShoppingCart[j].startnumber >= 2) {
     myShoppingCart[j].startnumber--;
@@ -125,7 +159,6 @@ function deleteShoppingCartPlace() {
 }
 
 function calculateSubTotal() {
-
   let element = 0;
   for (let index = 0; index < myShoppingCart.length; index++) {
     element += myShoppingCart[index].newprice;
@@ -168,6 +201,6 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 }
 
-function toggleRespMenu() { // function für resp Menü aus / zuklappen
+function toggleRespMenu() {
   document.getElementById('resp_menu').classList.toggle('resp_menu_closed')
 }

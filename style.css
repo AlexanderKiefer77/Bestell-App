@@ -161,7 +161,7 @@ header img {
 
 .shoppingCartArea {
     height: 300px;
-    overflow-y: auto;
+    overflow-y: scroll;
     text-align: start;    
     color: rgba(47, 79, 79, 0.7);  /*for no items in the shopping cart*/
     font-weight: bold; /*for no items in the shopping cart*/
@@ -237,4 +237,8 @@ footer {
     flex-wrap: wrap; 
     font-weight: bold;
     font-size: 24px;
+}
+
+.address a:hover {
+    color: darkblue;
 }
