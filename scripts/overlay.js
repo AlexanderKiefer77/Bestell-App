@@ -4,9 +4,13 @@ let displayAOT = document.getElementById('aot');
 let displayFooter = document.getElementById('footer');
 
 function openOverlay() { // render the Overlay
-    overlayPictureRendering();
-    toggleOverlay(); // starting toggle function
-    displayAOT.classList.add("d_none"); // add AOT the class d_none, This hides the contents of the AOT
+    if (myShoppingCart.length === 0) {
+        return;
+    } else {
+        overlayPictureRendering();
+        toggleOverlay(); // starting toggle function
+        displayAOT.classList.add("d_none"); // add AOT the class d_none, This hides the contents of the AOT
+    }
 }
 
 function overlayPictureRendering() {
@@ -15,7 +19,7 @@ function overlayPictureRendering() {
                                 <h4>Guten Appetit.</h4>
                                 <button class="overlayCloseButton overlayCloseButton:hover" id="closeButton"
                                 onclick="closeOverlay()">Schliessen</button>
-                             </div>`;    
+                             </div>`;
 }
 
 function toggleOverlay() {
