@@ -1,5 +1,5 @@
 
-@media(max-width: 1150px) {
+@media(max-width: 1250px) {
 
     .heroIcon {
         display: none;
@@ -18,7 +18,7 @@
     }
 }
 
-@media(max-width: 720px) {
+@media(max-width: 750px) {
 
     header img {
         height: 60px;
@@ -32,7 +32,7 @@
         margin-right: 4px;
     }
 
- .foodMenuBar img {
+    .foodMenuBar img {
         display: none;
     }
 

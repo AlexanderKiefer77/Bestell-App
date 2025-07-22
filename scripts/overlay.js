@@ -13,6 +13,7 @@ function openOverlay() { // render the Overlay
         deleteShoppingCartPlace();
         myShoppingCart = [];
         calculateSubTotal();
+        renderShoppingCart();
     }
 }
 

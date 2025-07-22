@@ -133,14 +133,14 @@ let myDrinks = [
         "newprice": 2.00
     },
     {
-        "name": "Mineralwasser",
+        "name": "Mineralwasser still",
         "price": 2.00,
-        "description": "still, 0.33 l.",
+        "description": "ohne Kohlensäure, 0.33 l.",
         "startnumber": 1,
         "newprice": 2.00
     },
     {
-        "name": "Mineralwasser",
+        "name": "Mineralwasser natural",
         "price": 2.00,
         "description": "mit Kohlensäure, 0.33 l.",
         "startnumber": 1,
