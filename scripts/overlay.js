@@ -10,6 +10,9 @@ function openOverlay() { // render the Overlay
         overlayPictureRendering();
         toggleOverlay(); // starting toggle function
         displayAOT.classList.add("d_none"); // add AOT the class d_none, This hides the contents of the AOT
+        deleteShoppingCartPlace();
+        myShoppingCart = [];
+        calculateSubTotal();
     }
 }
 
