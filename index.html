@@ -21,65 +21,65 @@
 </head>
 
 <body onload="init()">
-    <header>
+    <header class="header">
         <div class="contentWidth">
-            <div class="innerHeader">
+            <section class="innerHeader">
                 <img src="./assets/Logo/Logo.png" alt="Logo Bestellapp">
-                <img src="./assets/icons/menu.svg" alt="Logo Navigationsmenü" class="navButton"
+                <input type="image" src="./assets/icons/menu.svg" alt="Logo Navigationsmenü" aria-label="Navigations-Menü öffnen" class="navButton"
                     onclick="toggleRespMenu()">
-            </div>
+            </section>
         </div>
     </header>
 
     <div id="overlay"></div>
 
-    <section id="aot" class="main"> <!-- entire width area without header footer -->
+    <main id="aot" class="main"> <!-- entire width area without header footer -->
         <div class="contentWidth">
 
             <div id="resp_menu" class="resp_menu_box resp_menu_closed">
                 <div class="navMenü">
-                    <button class="navMenueButton" onclick="toggleRespMenu()">close menü</button>
+                    <button tabindex="0" aria-label="Navigations-Menü schliessen" class="navMenueButton" onclick="toggleRespMenu()">close menü</button>
                 </div>
-                <div class="navLinks">
+                <nav class="navLinks">
                     <a href="#address">Kontakt</a>
                     <a href="">Geschäftsbedingungen</a>
                     <a href="./impressum.html">Impressum</a>
-                </div>
+                </nav>
             </div>
 
-            <div class="content"> <!-- area without header foooter -->
+            <section class="content"> <!-- area without header foooter -->
                 <div class="innerContent"> <!-- area without shoppingcart area -->
 
-                    <div class="heroImage"> <!-- picture -->
+                    <section class="heroImage"> <!-- picture -->
                         <div class="heroText"> <!-- banner in the picture -->
                             <div><img src="./assets/img/pizza.png" alt="kleines Pizza Logo" class="heroIcon"></div>
-                            <h1>Deeer Pizza Laden</h1>
-                            <p class="fontColor">&emsp;Bewertung ( 5,1 von 5 Sternen )</p>
+                                <h1>Deeer Pizza Laden</h1>
+                                <p class="fontColor">&emsp;Bewertung (&nbsp;5,1&nbsp;von&nbsp;5&nbsp;Sternen&nbsp;)</p>
                             <div class="foodMenuBar">
                                 <img src="./assets/icons/arrowRight.svg" alt="Pfeil rechts">
-                                <a href="#mainDishes"><h3>Hauptgerichte</h3></a>
-                                <a href="#supplements"><h3>Beilagen</h3></a>
-                                <a href="#drinks"><h3>Getränke</h3></a>                                
-                                <a href="#shoppingCart" class="foodMenuBarShoppingCart"><h3>Warenkorb</h3></a>
+                                <a href="#mainDishes"><h2 class="h2">Hauptgerichte</h2></a>
+                                <a href="#supplements"><h2 class="h2">Beilagen</h2></a>
+                                <a href="#drinks"><h2 class="h2">Getränke</h2></a>                                
+                                <a href="#shoppingCart" class="foodMenuBarShoppingCart"><h2 class="h2">Warenkorb</h2></a>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
                     <div id="mainDishes" class="dishes">
                         <h2>Hauptgerichte</h2>
-                        <img src="./assets/icons/arrowUp.svg" alt="Pfeil nach oben" onclick="scrollToTop()">
+                        <input type="image" src="./assets/icons/arrowUp.svg" alt="Pfeil nach oben" tabindex="0" aria-label="Icon für nach oben zu scrollen" class="arrowUpButton" onclick="scrollToTop()">
                     </div>
                     <div id="contentMainDishes"></div> <!-- for render function -->
 
                     <div id="supplements" class="dishes">
                         <h2>Beilagen</h2>
-                        <img src="./assets/icons/arrowUp.svg" alt="Pfeil nach oben" onclick="scrollToTop()">
+                        <input type="image" src="./assets/icons/arrowUp.svg" alt="Pfeil nach oben"  tabindex="0" aria-label="Icon für nach oben zu scrollen" class="arrowUpButton" onclick="scrollToTop()">
                     </div>
                     <div id="contentSupplements"></div> <!-- for render function -->
 
                     <div id="drinks" class="dishes">
                         <h2>Getränke</h2>
-                        <img src="./assets/icons/arrowUp.svg" alt="Pfeil nach oben" onclick="scrollToTop()">
+                        <input type="image" src="./assets/icons/arrowUp.svg" alt="Pfeil nach oben" tabindex="0" aria-label="Icon für nach oben zu scrollen" class="arrowUpButton" onclick="scrollToTop()">
                     </div>
                     <div id="contentDrinks"></div> <!-- for render function -->
 
@@ -87,11 +87,13 @@
 
                 <section class="shoppingCartWrapper">
                     <div id="shoppingCart" class="shoppingCart">
-                        <h2 class="shoppingCartHeadline">Warenkorb</h2>
+                        <header>
+                            <h2 class="shoppingCartHeadline">Warenkorb</h2>
+                        </header>
 
                         <div id="shoppingCartRender" class="shoppingCartArea"></div><!-- for render function -->
 
-                        <div class="totalCosts">
+                        <footer class="totalCosts">
                             <div class="costs">
                                 <p>Zwischensumme</p>
                                 <p id="subtotal"></p>
@@ -104,16 +106,16 @@
                                 <b>Gesamt</b>
                                 <b id="totalCosts"></b>
                             </div>
-                        </div>
-                        <button class="orderButton" onclick="openOverlay()">Bestellen</button>
+                        </footer>
+                        <button tabindex="0" aria-label="Bestellung abschicken" class="orderButton" onclick="openOverlay()">Bestellen</button>
                     </div>
                 </section>
 
-            </div>
+            </section>
         </div>
-    </section>
+    </main>
 
-    <footer>
+    <footer class="footer">
         <div class="contentWidth">
             <address id="address" class="address">
                 <p>Deer Pizza Laden&emsp;/</p>

@@ -6,9 +6,9 @@
     }
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1010px) {
 
-    footer {
+    .footer {
         height: 140px;
     }
 
@@ -18,9 +18,9 @@
     }
 }
 
-@media(max-width: 750px) {
+@media(max-width: 830px) {
 
-    header img {
+    .header img {
         height: 60px;
     }
 
@@ -30,6 +30,11 @@
 
     .heroImage {
         margin-right: 4px;
+    }
+
+    .heroText {
+        text-align: center;
+        text-wrap: wrap;     
     }
 
     .foodMenuBar img {

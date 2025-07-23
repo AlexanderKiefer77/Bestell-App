@@ -18,12 +18,18 @@ function openOverlay() { // render the Overlay
 }
 
 function overlayPictureRendering() {
-    overlayRef.innerHTML = `<div class="sendingConfirmation">
-                                <h2>Vielen Dank für Ihre Bestellung.</h2>
-                                <h4>Guten Appetit.</h4>
-                                <button class="overlayCloseButton overlayCloseButton:hover" id="closeButton"
-                                onclick="closeOverlay()">Schliessen</button>
-                             </div>`;
+    overlayRef.innerHTML = `<dialog class="sendingConfirmation">
+                                <header>
+                                    <h2>Vielen Dank für Ihre Bestellung.</h2>
+                                </header>
+                                <section>
+                                    <h3>Guten Appetit.</h3>
+                                </section>
+                                <footer>
+                                    <button tabindex="0" aria-label="Fenster Sendebestätigung schliessen" class="overlayCloseButton overlayCloseButton:hover" id="closeButton"                               
+                                    onclick="closeOverlay()">Schliessen</button>
+                                </footer>
+                             </dialog>`;
 }
 
 function toggleOverlay() {

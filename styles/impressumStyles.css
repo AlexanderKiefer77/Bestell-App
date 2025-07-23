@@ -2,6 +2,11 @@
 /* ####################################### */
 /* this classes are only used in Impressum */
 
+.h1Impressum, .h2Impressum {
+    color: darkblue;
+}
+
+
 .contentWidthImpressum {
     box-sizing: border-box;
     max-width: var(--maxWidth);
@@ -18,22 +23,30 @@
     word-wrap: break-word;
 }
 
-header {
+.headerImpressum {
     display: flex;
     align-items: center;
+    height: 100px;
+    background-color: var(--backgroundColorHeaderFooter);
+    border-bottom: solid;
+    border-color: var(--borderColorHeaderFooter);
 }
 
-header img {
+.headerImpressum img {
     height: 80px;
     padding-left: 24px;
 }
 
-footer {
+.footerImpressum {
+    height: 100px;
+    background-color: var(--backgroundColorHeaderFooter);
     display: flex;
     align-items: center;
+    border-top: solid;
+    border-color: var(--borderColorHeaderFooter);
 }
 
-footer img {
+.footerImpressum img {
     height: 80px;
     padding-left: 24px;
 }
